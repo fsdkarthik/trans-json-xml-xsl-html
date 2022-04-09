@@ -1,0 +1,23 @@
+<hello name="{{ name }}"></hello>
+<p>Tranform json to html (Client side)</p>
+<h2>Select the transformation type</h2>
+<p>
+  <input
+    type="radio"
+    value="T1"
+    name="tranformation"
+    (change)="changeTransform()"
+    [(ngModel)]="transformation"
+  />
+  Transformation 1
+  <input
+    type="radio"
+    value="T2"
+    name="tranformation"
+    (change)="changeTransform()"
+    [(ngModel)]="transformation"
+  />
+  Transformation 2
+</p>
+{{ transformation }}
+<div [innerHtml]="report"></div>
